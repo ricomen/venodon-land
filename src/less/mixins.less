@@ -19,6 +19,37 @@
   margin-right: auto;
 }
 
+//     Margin & Padding
+// -------------------------
+.base-margin(@size) {
+  margin-top: @size;
+  margin-bottom: @size;
+}
+.margin-top(@size) {
+  margin-top: @size;  
+}
+.margin-bottom(@size) {
+  margin-bottom: @size;  
+}
+
+.base-padding(@size) {
+  padding-top: @size;
+  padding-bottom: @size;
+}
+.padding-top(@size) {
+  padding-top: @size;  
+}
+.padding-bottom(@size) {  
+  padding-bottom: @size;
+}
+
+//     Border color
+// -------------------------
+
+.border(@color) {
+  outline: 1px solid @color;
+  background-color: rgba(117,112,112, 0.5);
+}
 
 //     Gradient Tools
 // ----------------------
@@ -272,10 +303,34 @@
         clear: both;
     }
 }
+//Добавляем иконки
 .icon(@url) {
   display: inline-block;
   vertical-align: middle;
   width: @iconW;
   height: @iconH;
   background: url("@{pathToIcon}@{url}.png") no-repeat center;
+}
+
+//Добаляем шрифты
+
+/* .add-font(@font-url, @font-name, @font-weight: normal, @font-style: normal) {
+  font-family: @font-name;
+  src: url('@{font-folder}@{font-url}.eot'); // IE9 Compat Modes 
+  src: url('@{font-folder}@{font-url}.eot?#iefix') format('embedded-opentype'), // IE6-IE8 
+  url('@{font-folder}@{font-url}.woff') format('woff'), // Pretty Modern Browsers 
+  url('@{font-folder}@{font-url}.ttf') format('truetype'), // Safari, Android, iOS 
+  url('@{font-folder}@{font-url}.svg#@{font-name}') format('svg'); // Legacy iOS  
+  font-weight: @font-weight;
+  font-style: @font-style;
+} */
+//Современный подход
+.add-font(@font-url, @font-name, @font-weight: normal, @font-style: normal) {
+  font-family: @font-name;  
+  src: url('@{font-folder}@{font-url}.eot'); // IE9 Compat Modes 
+  src:
+  url('@{font-folder}@{font-url}.woff') format('woff'),
+  url('@{font-folder}@{font-url}.woff2') format('woff2');
+  font-weight: @font-weight;
+  font-style: @font-style;
 }
