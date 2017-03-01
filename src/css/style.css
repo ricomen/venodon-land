@@ -654,12 +654,32 @@ body {
   color: #fff;
   border-radius: 10px;
   background: linear-gradient(to bottom, #8429bd, #6d1c85);
-  box-shadow: 0 5px 5px #000;
+  box-shadow: 0 2px 2px #000;
+}
+.layout-columns:before,
+.layout-columns:after {
+  display: table;
+
+  content: "";
+}
+.layout-columns:after {
+  clear: both;
+}
+.layout-columns .layout-column-left,
+.layout-columns .layout-column-right {
+  width: 50%;
+}
+.layout-columns .layout-column-left {
+  float: left;
+}
+.layout-columns .layout-column-right {
+  float: right;
 }
 .product {
   padding-left: 230px;
 
   background: url("../img/product.png") no-repeat left top;
+  background-size: 35%;
 }
 .product .description-list {
   margin: 0;
@@ -684,4 +704,127 @@ body {
   content: "";
 
   background-color: red;
+}
+.order-wrapper {
+  width: 349px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 18px;
+
+  text-align: center;
+
+  color: #fff;
+  border: 2px solid #3d0b63;
+  border-radius: 5px;
+  background-color: #622193;
+}
+.order-title {
+  font-size: 36px;
+  line-height: 1.1;
+
+  margin: 0;
+  margin-bottom: 20px;
+
+  letter-spacing: -1px;
+}
+.order-title sup {
+  font-size: 20px;
+}
+.order-subtitle {
+  font-size: 20px;
+  line-height: 1.2;
+
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 22px;
+}
+.order-subtitle .flag-forever {
+  font-size: 16px;
+
+  position: absolute;
+  right: -5px;
+  bottom: -20px;
+
+  padding: 5px;
+
+  transform: rotate(-10deg);
+
+  border-radius: 2px;
+  background-color: #a81c4f;
+}
+.price-wrapper {
+  padding: 11px 15px;
+
+  text-align: center;
+
+  border-radius: 35px;
+  background-color: #49186d;
+}
+.price-wrapper .order-price {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.1;
+
+  margin: 0;
+
+  color: #b8ee42;
+}
+.price-wrapper .order-price span {
+  color: #af2d48;
+}
+.price-wrapper .order-price-decription {
+  font-size: 14px;
+  line-height: 1.2;
+
+  margin: 0;
+
+  color: #966d3d;
+}
+.order-form .order-btn {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.1;
+
+  display: block;
+
+  padding: 14px 10px;
+
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background: linear-gradient(to bottom, #e3f036, #8fc21f);
+  box-shadow: 0 2px 2px #000;
+}
+.order-form-wrapper {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+.order-form-field {
+  font-family: "Clean Sans", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 13px;
+
+  text-align: center;
+
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: linear-gradient(to bottom, #d8d8d8, #fff);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.through {
+  text-decoration: line-through;
+}
+.red {
+  color: #a31f28;
 }
