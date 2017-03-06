@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Венодон</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?139"></script>
+    <script type="text/javascript">
+      VK.init({apiId: 5903616, onlyWidgets: true});
+    </script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+  <div class="container">
+    <div class="attention">
+      <h2 class="title">Внимание!</h2>
+      <p class="content">Препарат является сильно действющим средством, которое оказывает такой-то и такой-то эффект, раскрываем выгоды от применения.</p>
+      <button class="btn-close"></button>
+    </div>
+    <div class="features">
+      <h1 class="logo">Венодон<sup>&reg;</sup></h1>
+      <ul class="features__list">
+        <li class="features__item"><i class="icon icon-green"></i>100% Натуральный<br>состав</li>
+        <li class="features__item"><i class="icon icon-cross"></i>Рекомендовано<br>российскими врачами</li>
+        <li class="features__item"><i class="icon icon-hand"></i>Свыше 19000<br>довольных покупателей</li>
+      </ul>
+      <div class="user-block"> 
+        <div id="vk_like"></div>
+        <a href="#form" class="order-call">Заказать звонок</a>
+      </div>    
+    </div>
+    <div class="promo">
+      <h2 class="promo__title uppercase">Избавьтесь от варикоза<br>навсегда всего за 1 курс</h2>
+      <h3 class="promo__subtitle uppercase">Венодон &mdash; красивые ноги без варикоза</h3>
+      <p>за счет уникальных свойств амаранта</p>
+    </div>    
+    </div>
+    <div class="layout-columns">
+      <div class="layout-column-left">
+      <div class="product">
+        <ul class="product__description-list">
+          <li class="product__description-item">Убирает синие вены и сосудистые звуздочки <span>за 3-4 применения</span></li>
+          <li class="product__description-item"><span>Заживляет</span> трофические язвы</li>
+          <li class="product__description-item">Восстанавливает естественный отток крови</li>
+          <li class="product__description-item"><span>Моментально снимает боль</span>в ногах</li>
+          <li class="product__description-item">Препятствует появлению варикоза повторно</li>
+          <li class="product__description-item">Содержит чамое полезное при варикозе растение</li>
+        </ul>
+        <div class="certicicates">
+          <img src="img/gmp-logo.png" width="64" height="64" alt="GMP" />
+          <img src="img/iso-logo.png" width="64" height="64" alt="ISO" />
+          <img src="img/ti-logo.png" width="64" height="64" alt="Green" />
+          <img src="img/product-logo.png" width="64" height="64" alt="Best-Product" />
+          <img src="img/bio-logo.png" width="64" height="64" alt="Bio" />
+        </div>        
+      </div>
+      </div>
+      <div class="layout-column-right">
+
+        <div class="order">
+
+          <h2 class="order__title">Закажите <span class="uppercase">Венодон<sup>&reg;<sup></span></h2>
+          <h3 class="order__subtitle">и избавьтесь от варикоза<span class="flag-forever">навсегда!</span></h3>
+
+          <div class="order__price">
+            <p class="order__price-content"><span class="through"><sup>2990</sup></span> 1 490 &#8381;</p>
+            <p class="order__price-decription">+примерная стоимость доставки</p>
+          </div>
+          
+          <fieldset class="order__form-wrapper">
+          <legend>Для заказа введите ваш номер телефона:</legend>
+            <form class="order__form" action="order" method="post">
+              <input type="text" class="order__form-field" name="phone" placeholder="+7(___)___-__-__"} >
+              <div class="order__secur">
+                <span class="order__secur-text">Ваши данные<br> под защитой:</span>
+                <i class="icon icon-secur-1"></i>
+                <i class="icon icon-secur-2"></i>
+                <i class="icon icon-secur-3"></i>
+                <i class="icon icon-secur-4"></i>
+              </div>
+              <button type="submit" class="order__btn">Заказать <span class="uppercase">Венодон</span> <span class="red">со скидко 50%</span></button>
+            </form>        
+          </fieldset>
+          <div class="order__sold">На этой неделе куплено уже: <span>105 шт.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.maskedinput.min.js"></script> 
+  <script type="text/javascript">
+    VK .Widgets.Like("vk_like", {type: "button"});
+  </script>
+  <script src="js/main.js"></script> 
+</body>
+</html>
