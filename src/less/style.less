@@ -15,8 +15,7 @@ body {
   background-image: url("../img/index-bg.png"), linear-gradient(to bottom, #d6c7df, #fff);
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center center;
-  background-size: cover cover;  
-  min-width: 450px;
+  background-size: cover cover;
 }
 .wrapper {
   margin-left: auto;
@@ -238,7 +237,7 @@ body {
       float: none;
       width: 100%;
       margin-bottom: 30px;
-      padding: 20px;
+      padding: 20px 1%;
       border-radius: 5px;
       background-color: rgba(255,255,255,0.5);
     }
@@ -262,11 +261,11 @@ body {
   @media @phone {
     padding-left: 0;
   }
-  &__description {
+  &__description {    
     &-list {
       margin: 0;
       padding: 0;
-      list-style: none;
+      list-style: none;      
     }
     &-item {
       font-size: 20px;
@@ -274,6 +273,10 @@ body {
       position: relative;
       margin-bottom: 25px;
       padding-left: 30px;
+      @media @phone {
+        font-size: 16px;
+        line-height: 1.2;
+      }
       &::before {
         position: absolute;
         content: "";        
@@ -296,13 +299,12 @@ body {
     .center();
   }
 }
-
 .order {
   position: relative;
   margin-left: auto;
   margin-right: auto;
   padding: 18px;
-  width: 349px;
+  max-width: 349px;
   border: 2px solid #3d0b63;
   text-align: center;
   color: #fff;
@@ -369,6 +371,9 @@ body {
         height: 99px;
         background-image: data-uri("../img/sale.png");
         background-repeat: no-repeat;
+        @media @small {          
+            display: none;          
+        }
       }
       &:after {
         right: -65px;
@@ -377,6 +382,9 @@ body {
         height: 231px;
         background-image: data-uri("../img/arrow.png");
         background-repeat: no-repeat;
+        @media @small {          
+          display: none;          
+        }
       }
       span {
         color: #af2d48;
