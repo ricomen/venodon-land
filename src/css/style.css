@@ -500,6 +500,7 @@ body {
 body {
   font-family: "Clean Sans", "Arial", sans-serif;
 
+  min-width: 450px;
   margin-top: 12px;
 
   background-image: url("../img/index-bg.png");
@@ -510,7 +511,6 @@ body {
   background-size: cover cover;
 }
 .wrapper {
-  min-width: 320px;
   max-width: 1180px;
   margin-right: auto;
   margin-left: auto;
