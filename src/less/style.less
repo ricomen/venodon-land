@@ -20,34 +20,25 @@ body {
 .wrapper {
   margin-left: auto;
   margin-right: auto;
-  width: 1180px;
+  max-width: 1180px;
+  min-width: 320px;
   padding: 0 10px;
-  @media @phone {
-    max-width: 568px;    
-  }
 }
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 960px;
-    @media @phone {
-    max-width: 508px;    
-  }
+  max-width: 960px;
 }
 .attention {
   margin-bottom: 15px;
+  padding: 6px 10px;
   position: relative;
   border: 2px solid #b74d53;
   border-radius: 3px;
   background-color: #fff;
-  padding: 6px 65px 6px 10px;  
-  .clearfix();
-
-   @media @phone {    
-     text-align: center; 
-     padding: 20px;                
-  }
-
+  @media @tablet {
+    text-align: center;
+  }  
   .title {
     position: relative;    
     margin: 0;
@@ -55,17 +46,12 @@ body {
     padding-bottom: 2px;
     margin-right: 10px;
     padding-left: 25px;
-    float: left;
+    display: inline-block;
+    vertical-align: middle;
     font-size: 22px;
     line-height: 1.2;
     color: #b1242e;
     text-transform: uppercase;
-    
-    @media @phone {
-      float: none;
-      margin-bottom: 10px;         
-    }
-
     &::before {
       position: absolute;
       content: "";
@@ -74,14 +60,13 @@ body {
       width: 18px;
       height: 23px;
       background-image: data-uri("../img/icons/attention.png");
-      background-repeat: no-repeat; 
-      @media @phone {
-        left: 150px;    
-      }     
+      background-repeat: no-repeat;
     }
   }
   .content {
     margin: 0;
+    display: inline-block;
+    vertical-align: middle;
     color: #b1242e;
     font-size: 12px;
     line-height: 1.2;
@@ -118,9 +103,9 @@ body {
   .clearfix();
   margin-bottom: 25px;
   .logo {    
-    width: 17.7%;
+    width: 18.7%;
     margin: 0;
-    margin-right: 22px;
+    margin-right: 1%px;
     font-size: 34px;
     line-height: 1.1;
     color: @violet;
@@ -138,44 +123,43 @@ body {
     }    
   }
   &__list {
+    width: 60%;
     display: inline-block;
     vertical-align: middle;
     margin: 0;
     padding: 0;
-    list-style: none;
-    .clearfix();
-    @media @phone {
-      float: left;
+    list-style: none;    
+    @media @phone {      
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 20px;     
+      text-align: center; 
     }    
   }
   &__item {
+    width: 24%;
     position: relative;
-    float: left;
+    display: inline-block;
+    vertical-align: middle;
     font-size: 14px;
     line-height: 1.1;
     font-weight: 300;
     padding-left: 40px;
-    margin-right: 20px;
+    margin-right: 2%;
     &:last-child {
       margin-right: 0;  
     }
     @media @phone {
-      float: none;
-      display: table-cell;
-      vertical-align: top;     
       margin-bottom: 10px;    
     }    
   }
   .user-block {
-    width: 17.7%;
+    width: 17%;
     float: right; 
     @media @phone {
       width: 100%;
     }   
   }
-  .order-call {
+   .order-call {
     padding: 3px 2px;
     font-size: 14px;
     line-height: 1.1;
@@ -207,7 +191,11 @@ body {
     margin-bottom: 25px;
     font-size: 53px;
     line-height: 1.1;
-    font-weight: bold;   
+    font-weight: bold;
+    @media @phone {
+      font-size: 34px;
+      line-height: 1.1;
+    }
   }
   &__subtitle {
     margin: 0;
@@ -221,11 +209,21 @@ body {
     max-width: 700px;
     border-radius: 30px;
     background-color: #a6ce25;
+    @media @phone {
+      font-size: 24px;
+      line-height: 1.1;
+      padding: 10px;
+    }
   }
   p {
     margin: 0;
     font-size: 24px;
     line-height: 1.1;
+    @media @phone {
+      font-size: 18px;
+      line-height: 1.1;
+      padding: 10px;
+    }
   }
 }
 .layout-columns {
@@ -240,6 +238,8 @@ body {
       float: none;
       width: 100%;
       margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 5px;
       background-color: rgba(255,255,255,0.5);
     }
   }
@@ -253,9 +253,15 @@ body {
   }
 }
 .product {
-  padding-left: 230px;;
+  padding-left: 35%;
   background: url("../img/product.png") no-repeat left top;
   background-size: contain;
+  @media @tablet {
+    padding-left: 10%;
+  }
+  @media @phone {
+    padding-left: 0;
+  }
   &__description {
     &-list {
       margin: 0;
@@ -284,6 +290,10 @@ body {
 .certicicates {
   img {
     margin-left: -10px;
+  }
+  @media @tablet {
+    display: block;
+    .center();
   }
 }
 
